@@ -89,11 +89,11 @@
 В этой статье мы описываем тета-функции и тета-ряды различных решеток, а также 
 устанавливаем их модулярность относительно различных подгрупп модулярной группы
 $SL_2(\ZZ)$.
-\subsection{Историческая справка}
 
-\subsection{Почему интересно}
+Тета-функции применялись для исследования плотностей,  различных свойств решеток и упаковок \cite{conway}. 
 
-\subsection{Результаты}
+Интерес к ним возник также в теории суперструн, когда был поднят вопрос о построении специфичных модулярных форм веса 8. Мы показываем, как строить такие, когда размерность аргументов равна 1.
+
 
 \section{Тета-функции}
 В данной главе мы определим тета-функции Якоби, а также тета-функции с рациональными характеристиками. Получим выражения для рядов тета-функций с полуцелыми характеристиками.
@@ -138,26 +138,24 @@ T_a S_b f(z)=T_a f(z + b) = \exp{(\pi i a^2 \tau + 2 \pi i a (z + b))} f(z + a\t
 
 \begin{definition}
 	Тета-функциями с полуцелыми характеристиками называются 4 функции
-	\begin{equation}
-		\begin{split}
-			\theta_1(q)=\theta_{1/2, 1/2}(0, \tau) \\
-			\theta_2(q)=\theta_{1/2, 0}(0, \tau) \\
-			\theta_3(q)=\theta_{0, 0}(0, \tau) \\
-			\theta_4(q)=\theta_{0, 1/2}(0, \tau) \\
-		\end{split}
-	\end{equation}
+	\begin{align}
+			\theta_1(q) &= \theta_{1/2, 1/2}(0, \tau) \\ \nonumber
+			\theta_2(q) &= \theta_{1/2, 0}(0, \tau) \\ \nonumber
+			\theta_3(q) &= \theta_{0, 0}(0, \tau) \\ \nonumber
+			\theta_4(q) &= \theta_{0, 1/2}(0, \tau)
+	\end{align}
 	где, как и ранее, $q=e^{\pi i \tau}$.
 \end{definition}
 
 \begin{theorem}
 Имеют место следующие равенства
 
-\begin{gather*}
-	\theta_1(q)=-\sum_{n \in \ZZ} (-1)^{n-1/2}q^{(n+1/2)^2} \\ 
-	\theta_2(q)=\sum_{n \in \ZZ} q^{(n+1/2)^2} \\
-	\theta_3(q)=\sum_{n \in \ZZ} q^{n^2}	\\
-	\theta_4(q)=\sum_{n \in \ZZ} {(-1)^n q^{n^2}}
-\end{gather*}
+\begin{align}
+	\theta_1(q) &= -\sum_{n \in \ZZ} (-1)^{n-1/2}q^{(n+1/2)^2} \\ \nonumber
+	\theta_2(q) &= \sum_{n \in \ZZ} q^{(n+1/2)^2} \\	\nonumber
+	\theta_3(q) &= \sum_{n \in \ZZ} q^{n^2}	\\	\nonumber
+	\theta_4(q) &= \sum_{n \in \ZZ} {(-1)^n q^{n^2}}
+\end{align}
 
 где, как и ранее, $q=e^{\pi i \tau}$
 
@@ -165,37 +163,36 @@ T_a S_b f(z)=T_a f(z + b) = \exp{(\pi i a^2 \tau + 2 \pi i a (z + b))} f(z + a\t
 
 \begin{proof}
 	
-\begin{equation*}
-	\begin{split}
+
+	\begin{align}
 \theta_{4}(q) 
-= \theta_{0, 1/2}(0, \tau) = 
-\sum_{n \in \ZZ} \exp{(2 \pi i n(0 + \frac{1}{2}) + \pi i n^2 \tau)} = \\
-\sum_{n \in \ZZ} (-1)^n \exp{(\pi i n^2 \tau)} = 
+&= \theta_{0, 1/2}(0, \tau) = 
+\sum_{n \in \ZZ} \exp{(2 \pi i n(0 + \frac{1}{2}) + \pi i n^2 \tau)} \\ \nonumber
+&= \sum_{n \in \ZZ} (-1)^n \exp{(\pi i n^2 \tau)} = 
 \sum_{n \in \ZZ} (-1)^n q^{n^2}
-	\end{split}
-\end{equation*}
+	\end{align}
 
-\begin{equation*}
-	\begin{split}
-\theta_{2}(q) 
-= \theta_{1/2, 0}(0, \tau) = 
-\exp{(\pi i (1/2)^2 \tau + 2 \pi i (1/2) \cdot 0)}
-\sum_{n \in \ZZ} \exp{(2 \pi i n(0 + \frac{1}{2}\tau) + \pi i n^2 \tau)} = \\
-\sum_{n \in \ZZ} \exp{(\pi i (n^2 + n + 1/4) \tau)} = 
-\sum_{n \in \ZZ} q ^ {(n+1/2)^2}
-	\end{split}
-\end{equation*}
 
-\begin{equation*}
-	\begin{split}
+\begin{align}
+	\theta_{2}(q) 
+	&= \theta_{1/2, 0}(0, \tau) = 
+	\exp{(\pi i (1/2)^2 \tau + 2 \pi i (1/2) \cdot 0)}
+	\sum_{n \in \ZZ} \exp{(2 \pi i n(0 + \frac{1}{2}\tau) + \pi i n^2 \tau)} \\ \nonumber
+	&= \sum_{n \in \ZZ} \exp{(\pi i (n^2 + n + 1/4) \tau)} = 
+	\sum_{n \in \ZZ} q ^ {(n+1/2)^2}
+\end{align}
+
+
+
+	\begin{align}
 		\theta_{1}(q)
-=\theta_{1/2, 1/2}(0, \tau) = 
+&= \theta_{1/2, 1/2}(0, \tau) = 
 \exp{(\pi i (1/2)^2 \tau + 2 \pi i (1/2) \cdot (0 + 1/2))}
-\sum_{n \in \ZZ} \exp{(2 \pi i n(0 + 1/2 + \frac{1}{2}\tau) + \pi i n^2 \tau)} = \\
-\sum_{n \in \ZZ} \exp{(\pi i (n + 1/2))} \exp{(\pi i (n^2 + n + 1/4) \tau)} = 
+\sum_{n \in \ZZ} \exp{(2 \pi i n(0 + 1/2 + \frac{1}{2}\tau) + \pi i n^2 \tau)} \\ \nonumber
+&= \sum_{n \in \ZZ} \exp{(\pi i (n + 1/2))} \exp{(\pi i (n^2 + n + 1/4) \tau)} = 
 \sum_{n \in \ZZ} (-1)^{n+1/2} q ^ {(n+1/2)^2}
-	\end{split}
-\end{equation*}
+	\end{align}
+
 
 \end{proof}
 
@@ -256,33 +253,33 @@ T_a S_b f(z)=T_a f(z + b) = \exp{(\pi i a^2 \tau + 2 \pi i a (z + b))} f(z + a\t
 \begin{proof}
 Пусть $f, g \in  \ModkN{k}{N}$. Тогда $f(\gamma \tau) = e_{\gamma}(\tau) f(\tau)$
 и $g(\gamma \tau) = e_{\gamma}(\tau) g(\tau)$. Значит,
-$$
+\begin{equation}
 (f + g)(\gamma \tau) = f(\gamma(\tau)) + g(\gamma(\tau)) 
 = e_\gamma(\tau)f(\tau) + e_\gamma(\tau)g(\tau)
 = e_\gamma(\tau)(f(\tau) + g(\tau))
-$$
+\end{equation}
 
 Проверим $(M2)$: 
-$$
+\begin{equation}
 |f(\tau) + g(\tau)| \le C_f + C_g \quad \text{при} \quad 
 \Im \tau \ge \max(D_f, D_g)
-$$
+\end{equation}
 где $(C_f, D_f), (C_g, D_g)$ константы из $(M2)$ для $f, g$.
 
 Проверим $(M3)$. Фиксируем произвольный $s \in \QQ$. Тогда для некоторых 
 $c_s^f, d_s^f, c_s^g, d_s^g > 0$:
-\begin{gather*}
-	|f(\tau)| \le \frac{c_s^f}{|\tau - s|^k} \quad \text{при} \quad 
+\begin{align}
+	|f(\tau)| &\le \frac{c_s^f}{|\tau - s|^k} \quad \text{при} \quad 
 		|\tau - s - i \cdot d_s^f| \le d_s^f \\	
-	|g(\tau)| \le \frac{c_s^g}{|\tau - s|^k} \quad \text{при} \quad 
-		|\tau - s - i \cdot d_s^g| \le d_s^g \\
-\end{gather*}
+	|g(\tau)| &\le \frac{c_s^g}{|\tau - s|^k} \quad \text{при} \quad 
+		|\tau - s - i \cdot d_s^g| \le d_s^g
+\end{align}
 
 Обозначим $c_s:=c_s^f + c_s^g, d_s:=\min(d_s^f, d_s^g)$. Тогда
-$$
+\begin{equation}
 	|f(\tau) + g(\tau)| \le \frac{c_s}{|\tau - s|^k} \quad \text{при} \quad
 	|\tau - s - i \cdot d_s| \le d_s
-$$
+\end{equation}
 
 
 Для $\lambda \in \CC$ все три условия $(M1), (M2), (M3)$, очевидно, выполняются.
@@ -292,9 +289,9 @@ $$
 
 \begin{theorem}
 	$\ModN{N}$ образует градуированную алгебру:
-	$$
+	\begin{equation}
 	\ModN{N} \stackrel{def}{=} \bigoplus_{k \ge 0} \ModkN{k}{N}
-	$$
+	\end{equation}
 \end{theorem}
 
 \begin{proof}
@@ -311,9 +308,9 @@ $$
 
 
 \begin{claim}
-	$$
+	\begin{equation}
 	e_{\gamma_1 \gamma_2}(\tau) = e_{\gamma_1}(\gamma_2(\tau)) e_{\gamma_2}(\tau)
-	$$
+	\end{equation}
 \end{claim}
 \begin{proof}
 	Достаточно разделить и умножить левую часть на $e_{\gamma_2(\tau)}$
@@ -325,18 +322,18 @@ $$
 
 \begin{proof}
 	Запишем условие $(M1)$ для $\gamma_1$ и $\gamma_2$:
-	$$
+	\begin{equation}
 	f(\gamma_1(\tau)) = e_{\gamma_1}(\tau) f(\tau)
-	$$
-	$$
+	\end{equation}
+	\begin{equation}
 	f(\gamma_2(\tau)) = e_{\gamma_2}(\tau) f(\tau)
-	$$
+	\end{equation}
 	Сразу следует нужное равенство: 
-	$$
+	\begin{equation}
 	f(\gamma_1(\gamma_2(\tau))) = e_{\gamma_1}(\gamma_2(\tau)) f(\gamma_2(\tau))
 	= e_{\gamma_1}(\gamma_2(\tau)) e_{\gamma_2}(\tau) f(\tau) 
 	= e_{\gamma_1 \gamma_2}(\tau) f(\tau)
-	$$
+	\end{equation}
 \end{proof}
 
 
@@ -352,22 +349,22 @@ $$
 	
 	\begin{enumerate}[start=1, label={(\bfseries F\arabic*):}]
 		\item 
-		$$
+		\begin{equation}
 		\theta \Big( \frac{z}{c \tau + d}, \frac{a \tau + b}{c \tau + d} \Big) = 
 		\zeta (c \tau + d)^{1/2} \exp{(\frac{\pi i c z^2}{c\tau + d})} \theta(z, \tau)
-		$$
+		\end{equation}
 	\end{enumerate}
 	
 	где $\zeta^8=1$ и $\zeta$ определяется в зависимости от четности $c$, $d$:
 	\begin{enumerate}
 		\item c четно, d нечетно
-		$$
+		\begin{equation}
 		\zeta = i^{(d - 1)/2} \cdot \Big( \frac{c}{|d|} \Big)
-		$$
+		\end{equation}
 		\item c нечетно, d четно
-		$$
+		\begin{equation}
 		\zeta = \exp{(-\pi i c / 4)} \cdot \Big( \frac{d}{c} \Big)
-		$$
+		\end{equation}
 		
 		где $\Big( \frac{x}{y} \Big)$ -- символ Якоби для x, y.
 	\end{enumerate}
@@ -377,52 +374,47 @@ $$
 	Отныне будем считать $c > 0$.
 	
 	Рассмотрим функцию
-	$$
+	\begin{equation}
 		\Psi(y, \tau) = \exp(\pi i c (c\tau + d) y^2) \theta((c\tau + d)y, \tau)
-	$$
+	\end{equation}
 	Она будет периодичной относительно сдвигов $y \mapsto y + 1$ и квазипериодичной относительно сдвига $y \mapsto y + (a\tau+b)/(c\tau + d)$:
-	$$
+	\begin{equation}
 		\Psi(y + \frac{a\tau+b}{c\tau+d}) 
 		= \exp(-\pi i \frac{a\tau+b}{c\tau+d} - 2\pi i y) \cdot \Psi(y, \tau)
-	$$
-	$$
+	\end{equation}
+	\begin{equation}
 	\Psi(y, \tau) = \phi(\tau)\theta(y, (a\tau + b)/(c\tau+d))
-	$$
+	\end{equation}
 	где $\phi(\tau)$ -- некоторая неизвестная функция.
 	Оба эти равенства показать нетрудно, см. \cite{mumford} \S 7.
-	$$
+	\begin{equation}
 	\theta(z, \tau)=\phi(\tau)\exp(-\pi i cz^2/(c\tau+d)) 
 	\theta(z/(c\tau+d), ())
-	$$
+	\end{equation}
 	
 	Проинтегрируем обе части нижнего равенства по $y$ на отрезке $[0, 1]$:
-	$$
+\begin{align}
 	\int_{[0, 1]} \Psi(y, \tau) dy 
-	= \phi(\tau) \cdot \int_{[0, 1]} \theta(y, (a\tau+b)/(c\tau + d))
-	= \phi(\tau)
-	$$
-	\begin{gather*}
-	\phi(\tau)
-	= \int_{[0, 1]} \exp(\pi i c (c\tau + d) y^2) \theta((c\tau+d)y, \tau) dy \\
-	= \sum_{n \in \ZZ} \exp(-\pi i n^2 d/c)  
-		\int_{[0, 1]} \exp(\pi i (cy + n)^2(\tau+d/c))dy \\
-	= \sum_{n = 1...c} \exp(-\pi i n^2 d/c) 
+	&= \phi(\tau) \cdot \int_{[0, 1]} \theta(y, (a\tau+b)/(c\tau + d))
+	= \phi(\tau) \\
+	\phi(\tau) 
+	&= \int_{[0, 1]} \exp(\pi i c (c\tau + d) y^2) \theta((c\tau+d)y, \tau) dy \\ \nonumber
+	&= \sum_{n \in \ZZ} \exp(-\pi i n^2 d/c)  
+		\int_{[0, 1]} \exp(\pi i (cy + n)^2(\tau+d/c))dy \\ \nonumber
+	&= \sum_{n = 1...c} \exp(-\pi i n^2 d/c) 
 		\int_{\RR} \exp(\pi i c^2 y^2 (\tau + d/c)) dy
-	\end{gather*}
-
-\begin{gather*}
-	\int_{\RR}(\pi i c^2 y^2 (\tau + d/c)) dy = |\tau=it-d/c| \\
-	=\int_{\RR}\exp(-\pi c^2 y^2 t) dy = |u=ct^{1/2}y|
+	\int_{\RR}(\pi i c^2 y^2 (\tau + d/c)) dy = |\tau=it-d/c| \\ \nonumber
+	&=\int_{\RR}\exp(-\pi c^2 y^2 t) dy = |u=ct^{1/2}y|
 	= \frac{1}{ct^{1/2}} \int_{\RR} \exp(-\pi u^2) du = \frac{1}{ct^{1/2}}
-\end{gather*}
+\end{align}
 
 	Значит, 
-\begin{gather*}
+\begin{align}
 	\phi(\tau)
-	= \frac{1}{c \cdot ((\tau+d/c)/i)^{1/2}} 
+	&= \frac{1}{c \cdot ((\tau+d/c)/i)^{1/2}} 
 	\sum_{n=1..c} \exp(-\pi i n^2 d/c) \\
-	= \frac{1}{c\tau+d} \zeta
-\end{gather*}
+	&= \frac{1}{c\tau+d} \zeta
+\end{align}
 
 	где $\zeta^8=1$
 	
@@ -433,19 +425,19 @@ $$
 
 \begin{corollary}
 	\begin{tabularx}{\textwidth}{@{}X|X@{}}
-		$$\theta_{00}(z, \tau + 1) = \theta_{01}(z, \tau)$$
-		$$\theta_{01}(z, \tau + 1) = \theta_{00}(z, \tau)$$
-		$$\theta_{10}(z, \tau + 1) = \exp(\pi i/4)\theta_{10}(z, \tau)$$
-		$$\theta_{11}(z, \tau + 1) = \exp(\pi i/4)\theta_{11}(z, \tau)$$
+		\begin{equation}\theta_{00}(z, \tau + 1) = \theta_{01}(z, \tau)\end{equation}
+		\begin{equation}\theta_{01}(z, \tau + 1) = \theta_{00}(z, \tau)\end{equation}
+		\begin{equation}\theta_{10}(z, \tau + 1) = \exp(\pi i/4)\theta_{10}(z, \tau)\end{equation}
+		\begin{equation}\theta_{11}(z, \tau + 1) = \exp(\pi i/4)\theta_{11}(z, \tau)\end{equation}
 		&
-		$$\theta_{00}(\frac{z}{\tau}, -\frac{1}{\tau})
-			=(-i\tau)^{1/2}\exp(\pi i z^2 / \tau) \theta_{00}(z, \tau)$$
-		$$\theta_{01}(\frac{z}{\tau}, -\frac{1}{\tau})
-			=(-i\tau)^{1/2}\exp(\pi i z^2 / \tau) \theta_{10}(z, \tau)$$
-		$$\theta_{10}(\frac{z}{\tau}, -\frac{1}{\tau})
-			=(-i\tau)^{1/2}\exp(\pi i z^2 / \tau) \theta_{01}(z, \tau)$$
-		$$\theta_{11}(\frac{z}{\tau}, -\frac{1}{\tau})
-			=-(-i\tau)^{1/2}\exp(\pi i z^2 / \tau) \theta_{11}(z, \tau)$$
+		\begin{equation}\theta_{00}(\frac{z}{\tau}, -\frac{1}{\tau})
+			=(-i\tau)^{1/2}\exp(\pi i z^2 / \tau) \theta_{00}(z, \tau)\end{equation}
+		\begin{equation}\theta_{01}(\frac{z}{\tau}, -\frac{1}{\tau})
+			=(-i\tau)^{1/2}\exp(\pi i z^2 / \tau) \theta_{10}(z, \tau)\end{equation}
+		\begin{equation}\theta_{10}(\frac{z}{\tau}, -\frac{1}{\tau})
+			=(-i\tau)^{1/2}\exp(\pi i z^2 / \tau) \theta_{01}(z, \tau)\end{equation}
+		\begin{equation}\theta_{11}(\frac{z}{\tau}, -\frac{1}{\tau})
+			=-(-i\tau)^{1/2}\exp(\pi i z^2 / \tau) \theta_{11}(z, \tau)\end{equation}
 	\end{tabularx}
 \end{corollary}
 \begin{proof}
@@ -459,35 +451,25 @@ $$
   модулярной формой уже не являлась.
  
  Для произвольного $\gamma \in SL_2(\ZZ) / \Gamma_N$, $f \in \ModkN{k}{N}$ рассмотрим
- $$
+ \begin{equation}
  	[f(\tau)]^\gamma = e_{\gamma}^{-1}(\tau) f(\gamma\tau)
- $$
+ \end{equation}
  
 \begin{claim}
 	$[f(\tau)]^\gamma$ будет модулярной формой того же веса и уровня, что и 
 	$f(\tau) \in \ModkN{k}{N}$.
 \end{claim}
-\begin{proof}
-	$$
-	[f(\alpha \tau)]^\gamma = \frac{f(\gamma\alpha\tau)}{e_{\gamma}(\alpha \tau)}
-	= \frac{f(\gamma\alpha\tau)}{e_{\gamma\alpha}(\tau)} \cdot e_\alpha(\tau)
-	$$
-	но $\gamma\alpha \in \Gamma_N$, поэтому
-	$$
-	f(\gamma\alpha \tau) = e_{\gamma \alpha}(\tau) f(\tau)
-	$$
-\end{proof}
 
 
 \begin{claim}
 	\begin{tabularx}{\textwidth}{@{}X|X@{}}
-		$$[\theta_{00}^2(0, \tau)]^\alpha=\theta_{01}^2(0, \tau)$$
-		$$[\theta_{00}^2(0, \tau)]^\alpha=\theta_{00}^2(0, \tau)$$
-		$$[\theta_{00}^2(0, \tau)]^\alpha=i\theta_{10}^2(0, \tau)$$
+		\begin{equation}[\theta_{00}^2(0, \tau)]^\alpha=\theta_{01}^2(0, \tau)\end{equation}
+		\begin{equation}[\theta_{00}^2(0, \tau)]^\alpha=\theta_{00}^2(0, \tau)\end{equation}
+		\begin{equation}[\theta_{00}^2(0, \tau)]^\alpha=i\theta_{10}^2(0, \tau)\end{equation}
 		&
-		$$[\theta_{00}^2(0, \tau)]^\beta=-i\theta_{00}^2(0, \tau)$$
-		$$[\theta_{00}^2(0, \tau)]^\beta=-i\theta_{10}^2(0, \tau)$$
-		$$[\theta_{00}^2(0, \tau)]^\beta=-i\theta_{01}^2(0, \tau)$$
+		\begin{equation}[\theta_{00}^2(0, \tau)]^\beta=-i\theta_{00}^2(0, \tau)\end{equation}
+		\begin{equation}[\theta_{00}^2(0, \tau)]^\beta=-i\theta_{10}^2(0, \tau)\end{equation}
+		\begin{equation}[\theta_{00}^2(0, \tau)]^\beta=-i\theta_{01}^2(0, \tau)\end{equation}
 	\end{tabularx}
 \end{claim}
 \begin{proof}
@@ -501,10 +483,10 @@ $$
 \end{claim}
 \begin{proof}
 	Из равенства $(F1)$ для тета-константы $\theta_{00}(0, \tau)$ следует:
-	$$
+	\begin{equation}
 		\theta_{00}\Big(0, \frac{a \tau + b}{c \tau + d}\Big)^2 =
 		\zeta^2 (c\tau + d) \theta_{00}(0, \tau)^2
-	$$
+	\end{equation}
 	
 	и в силу $\begin{bmatrix}
 		a & b \\ c & d
@@ -524,22 +506,26 @@ $$
 	вблизи $s = \infty$, т.к. всегда можно найти подходящее преобразование 
 	$\gamma \in SL_2(\ZZ)$ т.ч. $\gamma(s)=\infty$.
 	
-	\begin{gather*}
-			|\theta_{00}(0, \tau)| = |\sum_{n \in \ZZ} \exp(\pi i n^2 \tau)|
-			\le \sum_{n \in \ZZ} \exp(-\pi i n^2 \cdot \Im \tau) \\
-			= 1 + 2 \sum_{n \in \NN} \exp(-\pi i \cdot \Im \tau) ^ {n^2}. \\
+\begin{align}
+		|\theta_{00}(0, \tau)| 
+		&= |\sum_{n \in \ZZ} \exp(\pi i n^2 \tau)|
+		\le \sum_{n \in \ZZ} \exp(-\pi i n^2 \cdot \Im \tau) \\ \nonumber
+		&= 1 + 2 \sum_{n \in \NN} \exp(-\pi i \cdot \Im \tau) ^ {n^2}
+\end{align}
+
+\begin{equation}
 			\sum_{n \in \NN} \exp(-\pi i \cdot \Im \tau) ^ {n^2} \le \frac{t}{1-t} = O(t) \quad \text{при} \quad \Im \tau \to \infty,
-	\end{gather*}
+\end{equation}
 
 	где $t=\exp(-\pi i \cdot \Im \tau) \to 0$ при $\Im \tau \to \infty$.
 
 	Точно так же, как и для $\theta_{00}$ получаем ограниченность при $\Im \tau \to \infty$:
-	$$
+	\begin{equation}
 	\theta_{01}(0, \tau) = 1 + O(\exp(-\pi \Im \tau))
-	$$
-	$$
+	\end{equation}
+	\begin{equation}
 		\theta_{10}(0, \tau) = O(\exp(-\pi \Im \tau))
-	$$
+	\end{equation}
 \end{proof}
 
 \begin{claim}
@@ -559,23 +545,23 @@ $$
 	$\theta_{01}^8(0, \alpha\tau)=\theta_{00}^8(0, \tau)$,
 	$\theta_{00}^8(0, \alpha\tau)=\theta_{01}^8(0, \tau)$, 
 	а также:
-	$$
+	\begin{equation}
 	\theta_{00}^8(0, \beta \tau)=
 	\Big( \theta_{00}^2(0, \beta \tau) \Big)^4=
 	\Big( -i\tau\theta_{00}^2(0, \tau) \Big)^4=
 	\tau^4\theta_{00}^8(0, \tau).
-	$$
+	\end{equation}
 	
 	Аналогично $\theta_{01}^8(0, \beta\tau)=\tau^4\theta_{10}^8(0, \tau)$ и
 	$\theta_{00}^8(0, \beta \tau)=\tau^4\theta_{10}^8(0, \tau)$.
 
 	Значит,
-	$$
+	\begin{equation}
 	\theta_{00}^8(0, \beta \tau) 
 	+ \theta_{01}^8(0, \beta \tau)
 	+ \theta_{10}^8(0, \beta \tau)=
 	\tau^4(\theta_{00}^8(0, \tau) + \theta_{01}^8(0, \tau) + \theta_{10}^8(0, \tau))
-	$$
+	\end{equation}
 	
 \end{proof}
 
@@ -584,19 +570,19 @@ $$
 тета-функции с полуцелыми характеристиками.
 \begin{definition}
 	Решеточным тета-рядом для целочисленной решетки $\Lambda \subset \RR^k$ называется функция
-	$$
+	\begin{equation}
 		\theta_{\Lambda}(q)=\sum_{x \in \Lambda} q^{x \cdot x}
-	$$
+	\end{equation}
 	где $x \cdot y$ означает скалярное произведение в смысле $\sum_{i} x_i y_i$. 
 	Мы будем обозначать $N(x) = x \cdot x$.
 \end{definition}
 
 Например, для решетки $\Lambda=\ZZ$ соответствующий тета-ряд $\theta_\ZZ$ будет равен
 
-$$
+\begin{equation}
 	\theta_{\ZZ}(q) = \sum_{x \in \ZZ} q^{x \cdot x} = 
 	\sum_{x \in \ZZ} \exp(\pi i x^2 \tau) = \theta_{00}(0, \tau)
-$$
+\end{equation}
 
 
 \begin{claim}
@@ -607,16 +593,16 @@ $$
 \begin{proof}
 	Заметим, что если $x = (x_1, x_2)$, где $x_1 \in \Lambda, x_2 \in \Omega$, то 
 	$x \cdot x = x_1 \cdot x_1 + x_2 \cdot x_2$. Тогда 
-	$$
+	\begin{equation}
 		\sum_{x \in \Lambda \oplus \Omega} q ^ {x \cdot x}
 		= \sum_{x_1 \in \Omega, x_2 \in \Lambda} q ^ {x_1 \cdot x_1 + x_2 \cdot x_2}
 		= \sum_{x_1 \in \Omega} q ^ {x_1 \cdot x_1} \cdot 
 		\sum_{x_2 \in \Omega} q ^ {x_2 \cdot x_2}
-	$$
+	\end{equation}
 \end{proof}
 
 \begin{claim}
-	$$\theta_{\ZZ^n}=\theta_{\ZZ}^n = \theta_{00}^n(0, \tau)$$
+	\begin{equation}\theta_{\ZZ^n}=\theta_{\ZZ}^n = \theta_{00}^n(0, \tau)\end{equation}
 \end{claim}
 \begin{proof}
 	
@@ -626,15 +612,15 @@ $$
 
 \begin{definition}
 	Усредненный тета-ряд решетки $\Lambda$ склеенной по векторам $u_l, l=1...s$
-	$$
+	\begin{equation}
 		\Game = \cup_{l=0}^s (u_l + \Lambda)
-	$$
-	$$
+	\end{equation}
+	\begin{equation}
 		\theta_{\Game}(q)=\frac{1}{s} \sum_{l=1}^s \sum_{k=1}^s 
 			\sum_{x \in \Lambda} q^{N(x + u_l - u_k)}
 		= \theta_{\Lambda}(q) + \frac{2}{s} \sum_{l < k} 
 			\sum_{x \in \Lambda} q^{N(x + u_l - u_k)}
-	$$
+	\end{equation}
 \end{definition}
 
 \begin{definition}
@@ -644,9 +630,9 @@ $$
 
 \begin{lemma}
 	Тета-ряд решетки $D_n$ равен 
-	$$
+	\begin{equation}
 		\frac{1}{2} \cdot (\theta_3^n(q) + \theta_4^n(q))
-	$$
+	\end{equation}
 \end{lemma}
 
 \begin{proof}
@@ -659,19 +645,19 @@ $$
 	Шаг индукции: $\theta_{3}^{n-1}(q) = \sum_{k=0}^\infty a_k q^k,
 	\quad \theta_{4}^{n-1}(q)=\sum_{k=0}^\infty (-1)^k a_k q^k$
 	
-	$$
+	\begin{equation}
 		\theta_{3}^{n} = \sum_{k=0}^\infty a_k q^k \cdot \sum_{k = 0}^\infty b_k q^k = 
 		\sum_{k = 0}^\infty \Big( \sum_{j=0}^k a_j b_{k-j} \Big) q^k
-	$$
-	$$
+	\end{equation}
+	\begin{equation}
 			\theta_{4}^{n} = \sum_{k=0}^\infty (-1)^k a_k q^k \cdot \sum_{k = 0}^\infty (-1)^k b_k q^k = 
 	\sum_{k = 0}^\infty \Big(  \sum_{j=0}^k (-1)^j a_j (-1)^{k-j} b_{k-j} \Big) q^k =
 	\sum_{k = 0}^\infty \Big( \sum_{j=0}^k a_j b_{k-j} \Big) (-1)^k q^k
-	$$
+	\end{equation}
 	
 	Теперь рассмотрим произвольный $x \in \ZZ^n$. Очевидно, что 
 	$\sum x_i = 0 \mod 2 \iff \sum x_i^2 = 0 \mod 2$. 
-	Это означает, что тета-ряд $D_n$ есть тета-ряд $\ZZ^n$ с вычтенными нечетными степенями, что в точности равно $$1/2 \cdot (\theta_3^n (q) + \theta_4 ^n (q))$$.
+	Это означает, что тета-ряд $D_n$ есть тета-ряд $\ZZ^n$ с вычтенными нечетными степенями, что в точности равно \begin{equation}1/2 \cdot (\theta_3^n (q) + \theta_4 ^n (q))\end{equation}
 \end{proof}
 
 \begin{lemma}
@@ -686,7 +672,7 @@ $$
 	Покажем, что оно биективно множеству $y \in \ZZ^n$ т.ч. $\sum_i y_i = 1 \mod 2$ и $\sum_i ({y_i} + 1/2)^2=k$.
 	
 	Отображение $\phi(x_1, x_2, ..., x_n) = (-x_1 - 1, x_2, ..., x_n)$ является искомой биекцией:
-		$$(-x_1 - 1 + 1/2) = (-x_1 - 1/2) = (x_1 + 1/2)^2 \implies \phi(x) \cdot \phi(x) = x \cdot x = k$$
+		\begin{equation}(-x_1 - 1 + 1/2) = (-x_1 - 1/2) = (x_1 + 1/2)^2 \implies \phi(x) \cdot \phi(x) = x \cdot x = k\end{equation}
 		
 	Если $x \ne \xi$, то $\exists i$ т.ч. $x_i \ne \xi_i$ и тогда очевидно $\phi(x)_i \ne \phi(\xi)_i$.
 	
@@ -695,12 +681,12 @@ $$
 	В силу конечности множества $\{x \in D_n | (x + (\frac{1}{2}^n)) \cdot (x + (\frac{1}{2}^n)) = k\}$
 	мы получили, что
 	
-	\begin{gather*}
-		\#\{x \in \ZZ^n | N(x  + (\frac{1}{2}^n)) = k\} = \\
-= \#\{x \in \ZZ^n | \sum_{x_i} = 0 \mod 2,  N(x  + (\frac{1}{2}^n)) = k\} + \\
-+  \#\{x \in \ZZ^n | \sum_{x_i} = 1 \mod 2,  N(x  + (\frac{1}{2}^n)) = k\} = \\
-=	2 \cdot \#\{x \in D_n | N(x  + (\frac{1}{2}^n)) = k\}
-	\end{gather*}
+	\begin{align}
+		\#\{x \in \ZZ^n | N(x  + (\frac{1}{2}^n)) = k\}
+&= \#\{x \in \ZZ^n | \sum_{x_i} = 0 \mod 2,  N(x  + (\frac{1}{2}^n)) = k\} \\ \nonumber
+&+  \#\{x \in \ZZ^n | \sum_{x_i} = 1 \mod 2,  N(x  + (\frac{1}{2}^n)) = k\} \\ \nonumber
+&=	2 \cdot \#\{x \in D_n | N(x  + (\frac{1}{2}^n)) = k\} \nonumber
+	\end{align}
 
 	Где в левой части стоит коэффициент перед $q^k$ в разложении $\theta_2^n(q)$ 
 	(или тета-ряда $\ZZ^n$), а в правой части удвоенный коэффициент перед $q^k$ в 
@@ -709,21 +695,21 @@ $$
 
 \begin{theorem}
 	Тета-ряд решетки 
-	$$
+	\begin{equation}
 		D_n^+ = D_n \cup (D_n + (\frac{1}{2}^n))
-	$$
+	\end{equation}
 	равен 
-	$$
+	\begin{equation}
 		\frac{1}{2} \cdot (\theta_{2}^n(q) + \theta_{3}^n(q) + \theta_4^n(q))
-	$$
+	\end{equation}
 \end{theorem}
 \begin{proof}
 	По определению, 
-	$$
+	\begin{equation}
 	\theta_{D_n^+}(q) 
 	= \theta_{D_n}(q) + \sum_{x \in D_n} q^{N(x + (\frac{1}{2}^n))}
 	= \theta_{D_n} + \theta_{D_n + (\frac{1}{2}^n)}
-	$$
+	\end{equation}
 \end{proof}
 
 \section{Тета-ряды как модулярные формы}
@@ -740,82 +726,48 @@ $$
 
 \begin{proof}
 	Для начала рассмотрим действие $\gamma \in \Gamma_2$ на тета-ряд решетки $\ZZ^{2}$:
-	$$
+	\begin{equation}
 		\theta_{\ZZ^2}(\gamma(\tau))=\theta_{00}^2(0, \gamma(\tau)) = \zeta^2 e_{\gamma}(\tau) \theta^2_{00}(0, \gamma(\tau))
-	$$
+	\end{equation}
 	где $\zeta^8=1$, $e_\gamma(\tau)=c \tau + d$. Отсюда сразу вытекает требуемое равенство для тета-ряда $\ZZ^{16}$.
 	
-	Для решетки $D_{16}^+$ модулярность тета-ряда относительно всей $SL_2(\ZZ)$ очевидна в силу Утверждения XXX и равенства:
-	$$\theta_{D_{16}^+}=\frac{1}{2}(\theta_{00}^{16}(0, \tau) + \theta_{01}^{16}(0, \tau) + \theta_{10}^{16}(0, \tau))$$
+	Для решетки $D_{16}^+$ модулярность тета-ряда относительно всей $SL_2(\ZZ)$ очевидна в силу доказанного нами равенства:
+	\begin{equation}\theta_{D_{16}^+}=\frac{1}{2}(\theta_{00}^{16}(0, \tau) + \theta_{01}^{16}(0, \tau) + \theta_{10}^{16}(0, \tau))\end{equation}
 	Его вес равен 8, потому что каждый из весов 
 	$\theta_{00}^2, \theta_{01}^2, \theta_{10}^2$ равен 2.
 	
 	Теперь займемся решеткой $\ZZ^4 \oplus D_{12}^+$. Ее тета-ряд равен $\theta_{\ZZ^4} \cdot \theta_{D_{12}^+} = \theta_{00}^4 \cdot (\theta_{00}^{12} + \theta_{01}^{12} + \theta_{10}^{12})$. Посмотрим, как $\gamma \in \Gamma_2$ действует на нем:
 
-\begin{equation*}
-	\begin{split}
-		\theta_{\ZZ^4}(\gamma(\tau)) \cdot \theta_{D_{12}^+}(\gamma(\tau)) = \\		
+\begin{align}
+		\theta_{\ZZ^4}(\gamma(\tau)) \cdot \theta_{D_{12}^+}(\gamma(\tau)) = \\	 \nonumber	
 		\zeta^4 e_{\gamma}(\tau)\theta_{00}^4 (\tau) \cdot
 		(
 			\zeta^{12} e_{\gamma}^3(\tau)\theta_{00}^{12} (0, \tau)
 			+ \zeta^{12} e_{\gamma}^3(\tau)\theta_{01}^{12} (0, \tau)
 			+ \zeta^{12} e_{\gamma}^3(\tau)\theta_{10}^{12} (0, \tau)
 		)
-	\end{split}
-\end{equation*}
+\end{align}
 	где $\zeta^8=1$ и $e_\gamma(\tau) = (c\tau + d)^2$.
 	
 	Окончательно получаем:
-	$$
+	\begin{equation}
 		\theta_{\ZZ^4}(\gamma(\tau)) \cdot \theta_{D_{12}^+}(\gamma(\tau))
 		=
 		e_{\gamma}^4(\tau)\cdot \theta_{00}^4 \cdot (\theta_{00}^{12} + \theta_{01}^{12} + \theta_{10}^{12})
-	$$
+	\end{equation}
 	
 \end{proof}
 
-\section{$\theta(x, it)$ как сумма дельта-функций}
-
-Рассмотрим функцию $\theta(x, it)$, $x, t \in \RR,  t \ge 0$. Она является вещественнозначной:
-
-$$
-\theta(x, it)=
-\sum_{n \in \ZZ} \exp(2 \pi i n x - \pi n^2 t)
-=1 + 2\sum_{n \in \NN} \exp(-\pi n^2 \tau) \cos(2 \pi n x)
-$$
-
-Рассмотрим предел ее действие при $t \to 0$ как обобщенной функции на пространстве периодических $\RR \to \RR$:
-
-$$f(x)=\sum_{m \in \ZZ} a_m \exp{(2 \pi i m x)}$$
-
-\begin{equation*}
-	\begin{split}
-		\int_{\RR} dx \cdot \theta(x, it) f(x) = 
-		\sum_{k \in \ZZ} \int_{[k, k+1]} dx \cdot \theta (x, it) f(x) = \\
-		\sum_{k \in \ZZ} \int_{[0, 1]} dx \cdot \theta (x + k, it) f(x + k) =  
-		\sum_{k \in \ZZ} \int_{[0, 1]} dx \cdot \theta (x, it) f(x + k) \\
-	\end{split}
-\end{equation*}
-
-...
-
-...
-
-...
-
-...
-
-
 \section{Открытые вопросы}
-
 \begin{enumerate}
 	\item Верно ли, что любая параболическая форма веса $n \ge 3$ равна полиному
-	степени $2n$ от функций $\theta_{a, b}(0, \tau)$.
+	степени $2n$ от функций $\theta_{a, b}(0, \tau)$?
+	(\textit{Параболической формой} называется модулярная форма, у которой в разложении по степеням $q=e^{\pi i \tau}$ свободный член равен 0)
 	\item Можно ли записать модулярные формы $\theta_{a, b}(0, n\tau)$ в виде
-	$$
+	\begin{equation}
 	\frac{\text{квадратичный полином от} \quad \theta_{c, d}}{\text{линейная комбинация} \quad \theta_{c, d}}
 	\quad ?
-	$$
+	\end{equation}
 \end{enumerate}
 
 \begin{thebibliography}{999}
@@ -828,9 +780,8 @@ $$f(x)=\sum_{m \in \ZZ} a_m \exp{(2 \pi i m x)}$$
 	Дж. Конвей, Н. Слоэн. 
 	\emph{Упаковки шаров, решетки и группы}.
 	
-	\bibitem{barkowsky}
-	
 \end{thebibliography}
 
 
 \end{document}
+
